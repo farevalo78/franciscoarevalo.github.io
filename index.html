@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Francisco Arevalo | Telecom Project Manager</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#0a0f1c;
+  --card:#121a2b;
+  --accent:#00f0ff;
+  --text:#e6edf3;
+  --muted:#8b9bb4;
+}
+
+body {
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* NAV */
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav h1 { color:var(--accent); }
+
+nav a {
+  margin-left:20px;
+  color:var(--muted);
+  text-decoration:none;
+}
+
+nav a:hover { color:var(--accent); }
+
+/* HERO */
+.hero {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:80px 0;
+  flex-wrap:wrap;
+}
+
+.hero h2 {
+  font-size:52px;
+  margin:0;
+}
+
+.hero span { color:var(--accent); }
+
+.hero p {
+  color:var(--muted);
+  margin:15px 0;
+}
+
+.btn {
+  padding:12px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  margin-right:10px;
+}
+
+.primary {
+  background:var(--accent);
+  color:black;
+}
+
+.secondary {
+  border:1px solid var(--accent);
+  color:var(--accent);
+}
+
+/* CARD */
+.card {
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:20px;
+  transition:.3s;
+}
+
+.card:hover { transform:translateY(-5px); }
+
+/* SECTION */
+.section { margin:60px 0; }
+.section h3 { color:var(--accent); }
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* METRICS */
+.metric {
+  font-size:26px;
+  color:var(--accent);
+  font-weight:bold;
+}
+
+footer {
+  text-align:center;
+  color:var(--muted);
+  margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+  <h1>FA.</h1>
+  <div>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <h2>Francisco <span>Arevalo</span></h2>
+    <p>Telecom Project Manager | Network Engineer | Fiber & 5G Specialist</p>
+    <p>Delivering large-scale telecom infrastructure, leading fiber deployments, and optimizing network performance across USA & LATAM.</p>
+
+    <a class="btn primary" href="resume.pdf" download>Download Resume</a>
+    <a class="btn secondary" href="#contact">Contact</a>
+  </div>
+</section>
+
+<section class="section">
+<h3>Impact Highlights</h3>
+
+<div class="grid">
+  <div class="card"><div class="metric">1000+</div>Telecom Equipment Managed</div>
+  <div class="card"><div class="metric">100+</div>Sites Deployed</div>
+  <div class="card"><div class="metric">3G Pioneer</div>First Deployment at Claro Ecuador</div>
+  <div class="card"><div class="metric">30%+</div>Efficiency Improvement</div>
+</div>
+</section>
+
+<section id="experience" class="section">
+<h3>Experience</h3>
+
+<div class="card">
+<h4>Project Manager & IT Network Engineer – MGM (NY)</h4>
+<p class="metric">Automation & Infrastructure Optimization</p>
+<p>
+Led telecom and IT infrastructure projects, upgraded PBX systems, and developed internal software tools
+to improve maintenance tracking and operational efficiency.
+</p>
+</div>
+
+<div class="card">
+<h4>Founder & CEO – IRTEL (LATAM)</h4>
+<p class="metric">$ Contracts + Regional Expansion</p>
+<p>
+Founded and scaled telecom company, securing contracts with Nokia, Huawei, ZTE.
+Managed installation and maintenance of microwave, BTS, and power systems.
+</p>
+</div>
+
+<div class="card">
+<h4>Claro Ecuador – Senior Telecom Engineer</h4>
+<p class="metric">Core Network & Infrastructure</p>
+<p>
+Led 3G rollout, fiber deployments, PBX migration (Nortel → Cisco),
+and nationwide telecom infrastructure expansion.
+</p>
+</div>
+
+</section>
+
+<section id="projects" class="section">
+<h3>Key Projects</h3>
+
+<div class="grid">
+
+<div class="card">
+<h4>3G Deployment</h4>
+<p>Led first 3G implementation, achieving first production call.</p>
+</div>
+
+<div class="card">
+<h4>FTTH & Fiber Rings</h4>
+<p>Deployment of fiber optic rings across major cities.</p>
+</div>
+
+<div class="card">
+<h4>PBX Migration</h4>
+<p>Full migration from Nortel to Cisco Unified Communications.</p>
+</div>
+
+<div class="card">
+<h4>Microwave Networks</h4>
+<p>Design & deployment of high-capacity radio links.</p>
+</div>
+
+</div>
+</section>
+
+<section id="skills" class="section">
+<h3>Skills</h3>
+
+<div class="grid">
+<div class="card">5G / LTE / GSM</div>
+<div class="card">Fiber Optics / DWDM</div>
+<div class="card">Cisco / Huawei / Nokia</div>
+<div class="card">Project Management (Agile / Scrum)</div>
+<div class="card">PBX / VoIP Systems</div>
+<div class="card">Network Optimization</div>
+</div>
+
+</section>
+
+<section id="contact" class="section">
+<h3>Contact</h3>
+
+<div class="card">
+<p>Email: Farevalo78@hotmail.com</p>
+<p>Phone: 213-475-7369</p>
+<p>LinkedIn: linkedin.com/in/francisco-arevalo-b442543a</p>
+<p>Open to relocation & remote work in USA</p>
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Francisco Arevalo | Telecom Leader</p>
+</footer>
+
+</div>
+
+</body>
+</html>
