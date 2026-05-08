@@ -1,253 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Francisco Arevalo | Telecom Project Manager</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --bg:#0a0f1c;
-  --card:#121a2b;
-  --accent:#00f0ff;
-  --text:#e6edf3;
-  --muted:#8b9bb4;
-}
-
-body {
-  margin:0;
-  font-family:'Inter',sans-serif;
-  background:var(--bg);
-  color:var(--text);
-}
-
-.container {
-  max-width:1100px;
-  margin:auto;
-  padding:21px;
-}
-
-/* NAV */
-nav {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-nav h1 { color:var(--accent); }
-
-nav a {
-  margin-left:20px;
-  color:var(--muted);
-  text-decoration:none;
-}
-
-nav a:hover { color:var(--accent); }
-
-/* HERO */
-.hero {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:80px 0;
-  flex-wrap:wrap;
-}
-
-.hero h2 {
-  font-size:52px;
-  margin:0;
-}
-
-.hero span { color:var(--accent); }
-
-.hero p {
-  color:var(--muted);
-  margin:15px 0;
-}
-
-.btn {
-  padding:12px 20px;
-  border-radius:8px;
-  text-decoration:none;
-  margin-right:10px;
-}
-
-.primary {
-  background:var(--accent);
-  color:black;
-}
-
-.secondary {
-  border:1px solid var(--accent);
-  color:var(--accent);
-}
-
-/* CARD */
-.card {
-  background:var(--card);
-  padding:20px;
-  border-radius:12px;
-  margin-bottom:20px;
-  transition:.3s;
-}
-
-.card:hover { transform:translateY(-5px); }
-
-/* SECTION */
-.section { margin:60px 0; }
-.section h3 { color:var(--accent); }
-
-/* GRID */
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-/* METRICS */
-.metric {
-  font-size:26px;
-  color:var(--accent);
-  font-weight:bold;
-}
-
-footer {
-  text-align:center;
-  color:var(--muted);
-  margin-top:40px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Francisco Arevalo | Telecom Project Manager</title>
+  <meta name="description" content="Telecom Project Manager &amp; Network Engineer specializing in Fiber, 5G, and large-scale infrastructure across USA &amp; LATAM.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
 </head>
-
 <body>
 
-<div class="container">
+<!-- SIGNAL WAVE BACKGROUND -->
+<div class="bg-canvas" aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+    <g class="wave-group-1">
+      <circle class="wave-circle" cx="85%" cy="15%" r="0"/>
+      <circle class="wave-circle" cx="85%" cy="15%" r="0"/>
+      <circle class="wave-circle" cx="85%" cy="15%" r="0"/>
+    </g>
+    <g class="wave-group-2">
+      <circle class="wave-circle" cx="8%" cy="80%" r="0"/>
+      <circle class="wave-circle" cx="8%" cy="80%" r="0"/>
+      <circle class="wave-circle" cx="8%" cy="80%" r="0"/>
+    </g>
+  </svg>
+</div>
 
+<!-- STICKY NAV -->
 <nav>
-  <h1>FA.</h1>
-  <div>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">FA.</a>
+    <div class="nav-links" id="nav-links">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <button class="theme-btn" id="theme-btn" aria-label="Toggle theme">&#9728;&#65039;</button>
+    </div>
   </div>
 </nav>
 
-<section class="hero">
-  <div>
-    <h2>Francisco <span>Arevalo</span></h2>
-    <p>Telecom Project Manager | Network Engineer | Fiber & 5G Specialist</p>
-    <p>Delivering large-scale telecom infrastructure, leading fiber deployments, and optimizing network performance across USA & LATAM.</p>
+<div class="page-content">
+  <div class="container">
 
-    <a class="btn primary" href="resume.pdf" download>Download Resume</a>
-    <a class="btn secondary" href="#contact">Contact</a>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Open to opportunities &middot; USA &amp; Remote
+      </div>
+      <h1>Francisco <span class="accent">Arevalo</span></h1>
+      <p class="hero-sub">Telecom Project Manager &middot; Network Engineer &middot; Fiber &amp; 5G Specialist delivering large-scale infrastructure across USA &amp; LATAM.</p>
+      <div class="hero-btns">
+        <a class="btn-primary" href="resume.pdf" download>&#11015; Download Resume</a>
+        <a class="btn-secondary" href="#contact">&#9993; Contact</a>
+      </div>
+    </section>
+
+    <!-- IMPACT HIGHLIGHTS -->
+    <section class="section" id="highlights">
+      <h2 class="section-title">&#128202; Impact Highlights</h2>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-icon">&#128225;</div>
+          <div class="metric-val">1000+</div>
+          <div class="metric-label">Telecom Equipment Managed</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon">&#127959;&#65039;</div>
+          <div class="metric-val">100+</div>
+          <div class="metric-label">Sites Deployed</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon">&#129351;</div>
+          <div class="metric-val">3G Pioneer</div>
+          <div class="metric-label">First Deployment at Claro Ecuador</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-icon">&#128200;</div>
+          <div class="metric-val">30%+</div>
+          <div class="metric-label">Efficiency Improvement</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <h2 class="section-title">&#128188; Experience</h2>
+      <div class="exp-card">
+        <div class="exp-title">Project Manager &amp; IT Network Engineer &mdash; MGM (NY)</div>
+        <div class="exp-meta">Automation &amp; Infrastructure Optimization</div>
+        <p class="exp-desc">Led telecom and IT infrastructure projects, upgraded PBX systems, and developed internal software tools to improve maintenance tracking and operational efficiency.</p>
+      </div>
+      <div class="exp-card">
+        <div class="exp-title">Founder &amp; CEO &mdash; IRTEL (LATAM)</div>
+        <div class="exp-meta">Regional Expansion &middot; Nokia &middot; Huawei &middot; ZTE</div>
+        <p class="exp-desc">Founded and scaled telecom company, securing contracts with Nokia, Huawei, ZTE. Managed installation and maintenance of microwave, BTS, and power systems.</p>
+      </div>
+      <div class="exp-card">
+        <div class="exp-title">Senior Telecom Engineer &mdash; Claro Ecuador</div>
+        <div class="exp-meta">Core Network &amp; Infrastructure</div>
+        <p class="exp-desc">Led 3G rollout, fiber deployments, PBX migration (Nortel &rarr; Cisco), and nationwide telecom infrastructure expansion.</p>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- KEY PROJECTS -->
+    <section class="section" id="projects">
+      <h2 class="section-title">&#128193; Key Projects</h2>
+      <div class="proj-grid">
+        <div class="proj-card">
+          <div class="proj-icon">&#128246;</div>
+          <div class="proj-title">3G Deployment</div>
+          <p class="proj-desc">Led first 3G implementation, achieving first production call.</p>
+        </div>
+        <div class="proj-card">
+          <div class="proj-icon">&#128268;</div>
+          <div class="proj-title">FTTH &amp; Fiber Rings</div>
+          <p class="proj-desc">Deployment of fiber optic rings across major cities.</p>
+        </div>
+        <div class="proj-card">
+          <div class="proj-icon">&#128222;</div>
+          <div class="proj-title">PBX Migration</div>
+          <p class="proj-desc">Full migration from Nortel to Cisco Unified Communications.</p>
+        </div>
+        <div class="proj-card">
+          <div class="proj-icon">&#128225;</div>
+          <div class="proj-title">Microwave Networks</div>
+          <p class="proj-desc">Design &amp; deployment of high-capacity radio links.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <h2 class="section-title">&#9881;&#65039; Skills</h2>
+      <div class="skills-wrap">
+        <span class="skill-tag"><span class="skill-dot"></span>5G / LTE / GSM</span>
+        <span class="skill-tag"><span class="skill-dot"></span>Fiber Optics / DWDM</span>
+        <span class="skill-tag"><span class="skill-dot"></span>Cisco / Huawei / Nokia</span>
+        <span class="skill-tag"><span class="skill-dot"></span>Project Management (Agile / Scrum)</span>
+        <span class="skill-tag"><span class="skill-dot"></span>PBX / VoIP Systems</span>
+        <span class="skill-tag"><span class="skill-dot"></span>Network Optimization</span>
+        <span class="skill-tag"><span class="skill-dot"></span>Microwave / BTS</span>
+        <span class="skill-tag"><span class="skill-dot"></span>FTTH Deployment</span>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2 class="section-title">&#9993;&#65039; Contact</h2>
+      <div class="contact-grid">
+        <a class="contact-item" href="mailto:Farevalo78@hotmail.com">
+          <span class="contact-icon">&#128231;</span>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-val">Farevalo78@hotmail.com</div>
+          </div>
+        </a>
+        <a class="contact-item" href="tel:2134757369">
+          <span class="contact-icon">&#128242;</span>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-val">213-475-7369</div>
+          </div>
+        </a>
+        <a class="contact-item" href="https://linkedin.com/in/francisco-arevalo-b442543a" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon">&#128188;</span>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-val">francisco-arevalo-b442543a</div>
+          </div>
+        </a>
+        <div class="contact-item">
+          <span class="contact-icon">&#127758;</span>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-val">Open to USA &amp; Remote</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2026 Francisco Arevalo &middot; Telecom Leader &middot; franciscoarevalo.net
+    </footer>
+
   </div>
-</section>
-
-<section class="section">
-<h3>Impact Highlights</h3>
-
-<div class="grid">
-  <div class="card"><div class="metric">1000+</div>Telecom Equipment Managed</div>
-  <div class="card"><div class="metric">100+</div>Sites Deployed</div>
-  <div class="card"><div class="metric">3G Pioneer</div>First Deployment at Claro Ecuador</div>
-  <div class="card"><div class="metric">30%+</div>Efficiency Improvement</div>
-</div>
-</section>
-
-<section id="experience" class="section">
-<h3>Experience</h3>
-
-<div class="card">
-<h4>Project Manager & IT Network Engineer – MGM (NY)</h4>
-<p class="metric">Automation & Infrastructure Optimization</p>
-<p>
-Led telecom and IT infrastructure projects, upgraded PBX systems, and developed internal software tools
-to improve maintenance tracking and operational efficiency.
-</p>
 </div>
 
-<div class="card">
-<h4>Founder & CEO – IRTEL (LATAM)</h4>
-<p class="metric">$ Contracts + Regional Expansion</p>
-<p>
-Founded and scaled telecom company, securing contracts with Nokia, Huawei, ZTE.
-Managed installation and maintenance of microwave, BTS, and power systems.
-</p>
-</div>
+<!-- BACK TO TOP -->
+<button class="back-top" id="back-top" aria-label="Back to top">&#8593;</button>
 
-<div class="card">
-<h4>Claro Ecuador – Senior Telecom Engineer</h4>
-<p class="metric">Core Network & Infrastructure</p>
-<p>
-Led 3G rollout, fiber deployments, PBX migration (Nortel → Cisco),
-and nationwide telecom infrastructure expansion.
-</p>
-</div>
-
-</section>
-
-<section id="projects" class="section">
-<h3>Key Projects</h3>
-
-<div class="grid">
-
-<div class="card">
-<h4>3G Deployment</h4>
-<p>Led first 3G implementation, achieving first production call.</p>
-</div>
-
-<div class="card">
-<h4>FTTH & Fiber Rings</h4>
-<p>Deployment of fiber optic rings across major cities.</p>
-</div>
-
-<div class="card">
-<h4>PBX Migration</h4>
-<p>Full migration from Nortel to Cisco Unified Communications.</p>
-</div>
-
-<div class="card">
-<h4>Microwave Networks</h4>
-<p>Design & deployment of high-capacity radio links.</p>
-</div>
-
-</div>
-</section>
-
-<section id="skills" class="section">
-<h3>Skills</h3>
-
-<div class="grid">
-<div class="card">5G / LTE / GSM</div>
-<div class="card">Fiber Optics / DWDM</div>
-<div class="card">Cisco / Huawei / Nokia</div>
-<div class="card">Project Management (Agile / Scrum)</div>
-<div class="card">PBX / VoIP Systems</div>
-<div class="card">Network Optimization</div>
-</div>
-
-</section>
-
-<section id="contact" class="section">
-<h3>Contact</h3>
-
-<div class="card">
-<p>Email: Farevalo78@hotmail.com</p>
-<p>Phone: 213-475-7369</p>
-<p>LinkedIn: linkedin.com/in/francisco-arevalo-b442543a</p>
-<p>Open to relocation & remote work in USA</p>
-</div>
-
-</section>
-
-<footer>
-<p>© 2026 Francisco Arevalo | Telecom Leader</p>
-</footer>
-
-</div>
-
+<script src="main.js"></script>
 </body>
 </html>
