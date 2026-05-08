@@ -170,7 +170,7 @@ nav {
 }
 
 .theme-btn:hover {
-  background: rgba(0, 240, 255, 0.1);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 
 .hamburger {
@@ -190,7 +190,7 @@ nav {
 }
 
 .hamburger:hover {
-  background: rgba(0, 240, 255, 0.1);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 
 /* ============================================================

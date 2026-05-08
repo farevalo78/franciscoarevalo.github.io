@@ -11,7 +11,7 @@ Thumbs.db
 # Claude / Superpowers
 .claude/
 .superpowers/
-docs/superpowers/
+docs/
 
 # Misc
 *.log
